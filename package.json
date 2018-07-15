@@ -2,6 +2,8 @@
   "name": "socket-packet-assembler",
   "version": "1.0.0",
   "description": "Read definite number of bytes from a socket",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "scripts": {
     "test": "mocha"
   },
