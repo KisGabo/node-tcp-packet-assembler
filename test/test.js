@@ -2,19 +2,19 @@ const chai = require('chai');
 const sinon = require('sinon');
 const sinonChai = require('sinon-chai');
 const net = require('net');
-const TcpPacketAssembler = require('../lib/index');
+const SocketPacketAssembler = require('../lib/index');
 
 const expect = chai.expect;
 
 chai.use(sinonChai);
 
-describe('TCP Packet Assembler', function () {
+describe('Socket Packet Assembler', function () {
 
-  /** @type TcpPacketAssembler */
+  /** @type SocketPacketAssembler */
   let sock;
 
   beforeEach(function () {
-    sock = new TcpPacketAssembler(new net.Socket());
+    sock = new SocketPacketAssembler(new net.Socket());
   });
 
   it('should never emit when num of bytes to read is not specified', function () {
