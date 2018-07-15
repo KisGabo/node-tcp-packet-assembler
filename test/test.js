@@ -140,6 +140,23 @@ describe('TCP Packet Assembler', function () {
     ])), 'Wrong bytes emitted').be.true;
   });
 
+  it('should emit named events', function () {
+    const tests = [ 'abc', 'def', 'ghi' ];
+
+    for (let test of tests) {
+      const buf = Buffer.from(test + 'content');
+      const eventName = test + 'event';
+      let emitted = null;
+
+      sock.on(eventName, buf => emitted = buf);
+      sock.readBytes(buf.length, eventName);
+      sock.origSocket.emit('data', buf);
+
+      expect(emitted, 'No bytes emitted').not.be.null;
+      expect(emitted.equals(buf), 'Wrong bytes emitted').be.true;
+    }
+  });
+
   it('#readBytes() should not allow to alter the number of bytes to read', function () {
     sock.readBytes(5);
 
