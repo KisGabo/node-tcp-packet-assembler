@@ -1,8 +1,14 @@
 {
   "name": "socket-packet-assembler",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Read definite number of bytes from a socket",
-  "keywords": [ "socket", "stream", "tcp", "ipc", "packet" ],
+  "keywords": [
+    "socket",
+    "stream",
+    "tcp",
+    "ipc",
+    "packet"
+  ],
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "scripts": {
