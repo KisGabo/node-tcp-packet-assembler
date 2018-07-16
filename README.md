@@ -38,7 +38,7 @@ __`class SocketPacketAssembler extends events.EventEmitter`__
 
 * `constructor(socket: net.Socket)`  
     Initialize a new assembler on given socket.
-* `readonly origSocket`  
+* `readonly origSocket: net.Socket`  
     The Socket object which is wrapped.
 * `readBytes(bytesToRead: number, identifier: string = "data"): void`  
     Set how many bytes you want to receive in the next event.
