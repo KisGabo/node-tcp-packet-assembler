@@ -1,6 +1,6 @@
 {
   "name": "socket-packet-assembler",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Read definite number of bytes from a socket",
   "keywords": [
     "socket",
